@@ -57,3 +57,4 @@ for i in [0,1,2]:
 
 axes[0,3].legend(bbox_to_anchor=(0.9, 1), fontsize = 13)
 plt.savefig('task22.png')
+

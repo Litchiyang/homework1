@@ -1,16 +1,17 @@
+#smooth? not the same shape?
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
 #import data
-data = pd.read_csv('task2/task21.csv')
+data = pd.read_csv('./task21.csv')
 
-fig, ax1 = plt.subplots(1, 1, figsize=(20, 6))
-fig.text(0.5, 1.02, "Japanese passenger cars sold in the US\n", ha="center", fontsize=25,color="red")
-fig.text(0.5, 0.97, "correlates with\n", ha="center", fontsize=20, color="gray")
-fig.text(0.5,0.95,"Suicides by crashing of motor vehicle", ha="center", fontsize=25, color="black")
+fig, ax1 = plt.subplots(1, 1, figsize=(20, 10))
+fig.text(0.5, 0.94, "Japanese passenger cars sold in the US\n", ha="center", fontsize=20,color="red")
+fig.text(0.5, 0.915, "correlates with\n", ha="center", fontsize=15, color="gray")
+fig.text(0.5,0.91,"Suicides by crashing of motor vehicle", ha="center", fontsize=20, color="black")
 #plt.title('Japanese passenger cars sold in the US\n correlates with\n Suicides by crashing of motor vehicle', y=1.06, fontsize = 25)
-plt.suptitle('Correlation:93.57% (r=0.935701)', y=0.92, fontsize=14)
+plt.suptitle('Correlation:93.57% (r=0.935701)', y=0.9, fontsize=14)
 
 
 line1, = ax1.plot(data.year, data.japanese_cars_sold, '-o', c = 'r')
@@ -30,4 +31,5 @@ ax2.set_yticklabels(['80 suicides','100 suicides', '120 suicides', '140 suicides
 
 plt.grid(linestyle="--", color='grey')
 
-ax2.legend((line2, line1), ("Suicides by crashing", "Japanese cars sold"), bbox_to_anchor=(0.65, -0.1), ncol = 2, fontsize = 14)
+ax2.legend((line2, line1), ("Suicides by crashing", "Japanese cars sold"), bbox_to_anchor=(0.65, -0.04), ncol = 2, fontsize = 14)
+plt.savefig('task21.png')

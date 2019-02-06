@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 #import data
-data = pd.read_csv('mpg.csv')
+data = pd.read_csv('./mpg.csv')
 
 data_fwd = data.loc[data.drv == 'f']
 data_rwd = data.loc[data.drv == 'r']
@@ -43,4 +44,4 @@ axes[1, 1].legend(title = 'drive train')
 axes[1, 1].set_ylabel('fuel economy (mpg)', fontsize = 16)
 axes[1, 1].set_xlabel('displacement (I)', fontsize = 16)
 
-plt.savefig('task2/task23.png')
+plt.savefig('task23.png')
